@@ -7,7 +7,6 @@ body{
 
 h1,h2,h3 {
     font-family: 'Times New Roman', Times, serif;
-
 }
 h2{
     color:#5637DD;
@@ -41,10 +40,10 @@ nav {
     color: white;
     font-size: 17px;
     margin-top: 5px;
-} */
-
-/* ///// FOOTER///// */
-.site-footer{
-    background-image: linear-gradient(#CEC8FF, white);
-    padding: 20px 0;
+} 
+select {
+    width:200px;
+}
+input {
+    width:200px;
 }
