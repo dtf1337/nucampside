@@ -41,9 +41,9 @@ nav {
     font-size: 17px;
     margin-top: 5px;
 } 
-select {
-    width:200px;
-}
-input {
-    width:200px;
+
+.tab-content{
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
 }
