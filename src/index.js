@@ -12,13 +12,13 @@ $(function() {
             $("#carouselButton").children("i").addClass("fa-pause"); 
         }
     });
-    /////////LOGINBTN////////////
-    $('#loginButton').click(function(){
-        $('#loginModal').modal('show');
-    });
-    /////////RESERVEBTN/////////////
-    $('#reserveButton').click(function(){
-        $('#reserveModal').modal('show');
-    });
 });
 
+/////////LOGINBTN////////////
+$('#loginButton').click(function(){
+    $('#loginModal').modal('show');
+});
+/////////RESERVEBTN/////////////
+$('#reserveButton').click(function(){
+    $('#reserveModal').modal('show');
+});

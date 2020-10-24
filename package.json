@@ -4,7 +4,18 @@
   "description": "review site nucamp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass -o src/css/ src/css/",
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'src/css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss'",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin src/img/* -o dist/img",
+    "usemin": "usemin src/contactus.html -d dist --htmlmin -o dist/contactus.html && usemin src/aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin src/index.html -d dist --htmlmin -o dist/index.html",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+
+
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +25,12 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "imagemin-cli": "^5.1.0",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1"
   }
 }
